@@ -1,3 +1,6 @@
+import json
+
+
 usuarios_bd = {}
 def registrar_usuario():
     usuario = input("Ingrese nombre de usuario: ")
@@ -11,6 +14,7 @@ def registrar_usuario():
         "saldo": 0.0
         }
         print("Cuenta creada exitosamente.")
+        
 def iniciar_sesion():
     usuario = input("Ingrese nombre de usuario: ")
     contrasena = input("Ingrese contraseña: ")
@@ -22,6 +26,7 @@ def iniciar_sesion():
     else:
         print("Error: Usuario o contraseña incorrectos.")
         return None
+    
 def depositar(usuario_actual):
     try:
         monto = float(input("Ingrese el monto a depositar: "))
@@ -33,6 +38,7 @@ def depositar(usuario_actual):
             print("Error: El monto a depositar debe ser mayor a 0.")
     except ValueError:
         print("Error: Por favor ingrese un valor numérico válido.")
+        
 def jugar_tragaperras(usuario_actual):
     try:
         apuesta = float(input("Ingrese el monto de su apuesta: "))
@@ -46,3 +52,19 @@ def jugar_tragaperras(usuario_actual):
     # Aquí se integrará posteriormente la mecánica de los rodillos
     except ValueError:
         print("Error: Por favor ingrese un valor numérico válido para la apuesta.")
+        
+def snakebet_logo():
+    a = '''
+    *****************************************************************************
+    *  ######  ##    ##    ###    ##    ## ######## ########  ######## ######## *
+    * ##    ## ###   ##   ## ##   ##   ##  ##       ##     ## ##          ##    *
+    * ##       ####  ##  ##   ##  ##  ##   ##       ##     ## ##          ##    *
+    *  ######  ## ## ## ##     ## #####    ######   ########  ######      ##    *
+    *       ## ##  #### ######### ##  ##   ##       ##     ## ##          ##    *
+    * ##    ## ##   ### ##     ## ##   ##  ##       ##     ## ##          ##    *
+    *  ######  ##    ## ##     ## ##    ## ######## ########  ########    ##    *
+    *****************************************************************************
+    '''
+    return a
+
+
